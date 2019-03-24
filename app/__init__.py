@@ -45,7 +45,7 @@ def create_app(config_class=Config):
         app.logger.addHandler(file_handler)
         app.logger.setLevel(logging.INFO)
 
-        return app
+    return app
 
 
 from app import models
