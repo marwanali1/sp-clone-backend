@@ -9,9 +9,12 @@ verify_ssl = true
 flask = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
-flask-login = "*"
 flask-bcrypt = "*"
 python-dotenv = "*"
+flask-restful = "*"
+flask-cors = "*"
+flask-testing = "*"
+pyjwt = "*"
 
 [requires]
 python_version = "3.7"

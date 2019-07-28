@@ -109,6 +109,7 @@ logs/
 
 # Local Databases
 app.db
+migrations/
 
 # Text editor and IDE files
 .DS_Store

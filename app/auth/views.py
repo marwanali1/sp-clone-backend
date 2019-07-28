@@ -1,26 +1,25 @@
-from app import db
-from app.auth import bp
+from app import db, api
 from app.models import User
-from flask import jsonify, request, make_response
+from flask_restful import Resource
 
 
-@bp.route('/login', methods=['GET'])
-def login():
-    # if current_user.is_authenticated:
-    #     pass
+class Login(Resource):
 
-    auth_dict = {
-        'isLoggedOn': True
-    }
-
-    return make_response(jsonify(auth_dict))
+    def get(self):
+        auth_dict = {
+            'isLoggedOn': True
+        }
+        return auth_dict
 
 
-@bp.route('/logout')
-def logout():
-    pass
+class Logout(Resource):
+
+    def get(self):
+        auth_dict = {
+            'isLoggedOn': False
+        }
+        return auth_dict
 
 
-@bp.route('/register', methods=['GET', 'POST'])
-def register():
-    pass
+api.add_resource(Login, '/login')
+api.add_resource(Logout, '/logout')
