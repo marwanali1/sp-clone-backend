@@ -116,3 +116,4 @@ migrations/
 .idea
 .idea/
 *.iml/
+.vscode/

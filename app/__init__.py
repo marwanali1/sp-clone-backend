@@ -33,7 +33,7 @@ def create_app(config_class=DevelopmentConfig):
         if not os.path.exists('logs'):
             os.mkdir('logs')
 
-        file_handler = RotatingFileHandler(filename='logs/skunkworks.log', maxBytes=10240, backupCount=10)
+        file_handler = RotatingFileHandler(filename='logs/sp-clone.log', maxBytes=10240, backupCount=10)
         logger_formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]')
         file_handler.setFormatter(logger_formatter)
         file_handler.setLevel(logging.INFO)

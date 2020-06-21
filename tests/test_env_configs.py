@@ -18,9 +18,9 @@ class TestDevelopmentConfig(TestCase):
         self.assertTrue(current_app.config['DEBUG'])
         self.assertFalse(current_app.config['TESTING'])
 
-        self.assertEqual(current_app.config['SECRET_KEY'], 'skunkworks-secret')
+        self.assertEqual(current_app.config['SECRET_KEY'], 'sp-clone-secret')
         self.assertEqual(current_app.config['SQLALCHEMY_DATABASE_URI'],
-                         'postgresql://postgres:@localhost/skunkworks_sp')
+                         'postgresql://postgres:@localhost/sp_clone')
 
 
 class TestProductionConfig(TestCase):
@@ -52,7 +52,7 @@ class TestTestingConfig(TestCase):
 
         self.assertNotEqual(current_app.config['SECRET_KEY'], 'my_precious')
         self.assertEqual(current_app.config['SQLALCHEMY_DATABASE_URI'],
-                         'postgresql://postgres:@localhost/skunkworks_sp_test')
+                         'postgresql://postgres:@localhost/sp_clone_test')
 
 
 if __name__ == '__main__':
